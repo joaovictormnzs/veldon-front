@@ -1,0 +1,78 @@
+:root {
+    --primary: #5d44f8;
+    --bg-body: #f8f9fa;
+    --white: #ffffff;
+    --text-main: #1A1A1A;
+    --border: #eeeeee;
+}
+
+body {
+    background-color: #f8f9fa;
+    font-family: 'Segoe UI', sans-serif;
+    margin: 0;
+    padding: 0%;
+}
+
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 15px; /* Isso evita que o texto encoste no canto da tela em celulares */
+}
+
+main.container {
+    padding-top: 30px;
+    padding-bottom: 50px;
+}
+
+/* Header e Logo */
+.header { background-color: #ffffff;
+    border-bottom: 1px solid #eeeeee;
+    padding: 0% 0;
+    width: 100;
+    display: block; /* Garante que ele se comporte como um bloco */
+}
+
+.logo-area { display: flex; 
+    align-items: center; 
+    gap: 15px; 
+}
+
+.icon-box { 
+    background: var(--primary); 
+    color: white; 
+    padding: 8px 12px; 
+    border-radius: 8px; 
+    font-weight: bold;
+}
+
+/* Tabs */
+.tabs { display: flex; 
+    gap: 8px; 
+    margin: 20px 0; 
+}
+
+.tab {
+    padding: 8px 16px;
+    font-size: 14px; 
+    border: none; 
+    background: white;
+    border-radius: 8px; 
+    cursor: pointer; 
+    font-weight: 500;
+}
+
+.tab.active { 
+    background: var(--primary); 
+    color: white; 
+}
+
+/* Botão Nova Tarefa */
+.btn-new {
+    background: var(--primary); 
+    color: white; 
+    border: none;
+    padding: 10px 20px; 
+    border-radius: 8px; 
+    cursor: pointer; 
+    font-weight: 600;
+}

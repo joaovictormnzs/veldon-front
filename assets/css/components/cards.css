@@ -1,0 +1,56 @@
+/* Grade de Estatísticas */
+.stats-grid {
+    display: flex; /* Isso coloca um ao lado do outro */
+    gap: 12px;
+    margin-top: 20px;
+    margin-bottom: 30px;
+}
+
+.stat-card {
+    background: white;
+    flex: 1; /* Faz todos terem o mesmo tamanho */
+    padding: 15px 20px;
+    border-radius: 10px;
+    border: 1px solid #eeeeee;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.stat-info h2 { font-size: 28px; margin: 5px 0 0 0; }
+.stat-info span { color: #666; font-size: 14px; }
+
+/* Sessão de Tarefas */
+.tasks-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.tasks-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 colunas */
+    gap: 15px;
+}
+
+.task-card {
+    background: white;
+    padding: 15px;
+    border-radius: 10px;
+    border: 1px solid #eeeeee;
+    min-height: 140px;
+}
+
+.task-top { display: flex; justify-content: space-between; align-items: flex-start; }
+.task-title-group { display: flex; gap: 10px; }
+.task-actions button { background: none; border: none; cursor: pointer; color: #888; margin-left: 5px; }
+
+.badge-green { 
+    background: #e8f5e9; color: #28a745; 
+    padding: 2px 8px; border-radius: 4px; font-size: 11px; font-weight: bold;
+}
+
+.task-desc { color: #666; font-size: 14px; margin: 15px 0; line-height: 1.4; }
+.task-date { color: #999; font-size: 12px; }
+.icon-green { color: #28a745; }

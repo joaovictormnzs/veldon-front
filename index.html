@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sistema de Tarefas</title>
+
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <link rel="stylesheet" href="assets/css/components/cards.css" />
+    <link rel="stylesheet" href="assets/css/components/modal.css" />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <header class="header">
+      <div class="container">
+        <div class="logo-area">
+          <div class="icon-box">V=</div>
+          <div>
+            <h1>Sistema de Tarefas</h1>
+            <p>Bem-vindo, João Silva</p>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main class="container">
+      <nav class="tabs">
+        <button class="tab active">Minhas Tarefas</button>
+        <button class="tab">Usuários</button>
+      </nav>
+
+      <section class="stats-grid">
+        <div class="stat-card">
+          <div class="stat-info">
+            <span>Total</span>
+            <h2>3</h2>
+          </div>
+          <i class="fas fa-list-check"></i>
+        </div>
+
+        <div class="stat-card">
+          <div class="stat-info">
+            <span>Concluídas</span>
+            <h2>1</h2>
+          </div>
+          <i class="far fa-check-circle icon-green"></i>
+        </div>
+      </section>
+
+      <section class="tasks-section">
+        <div class="tasks-header">
+          <h2>Suas Tarefas</h2>
+          <button class="btn-new" id="openModal">+ Nova Tarefa</button>
+        </div>
+
+        <div class="tasks-grid">
+          <article class="task-card">
+            <div class="task-top">
+              <div class="task-title-group">
+                <i class="far fa-check-circle icon-green"></i>
+                <div>
+                  <h3>Implementar sistema de login</h3>
+                  <span class="badge badge-green">Concluída</span>
+                </div>
+              </div>
+              <div class="task-actions">
+                <button title="Editar">
+                  <i class="fas fa-pencil-alt"></i>
+                </button>
+                <button title="Excluir"><i class="fas fa-trash"></i></button>
+              </div>
+            </div>
+            <p class="task-desc">
+              Criar tela de autenticação com validação de formulário.
+            </p>
+            <span class="task-date">Criada em 15/04/2026</span>
+          </article>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>
