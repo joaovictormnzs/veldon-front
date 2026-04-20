@@ -18,11 +18,16 @@
     <header class="header">
       <div class="container">
         <div class="logo-area">
-          <div class="icon-box">V=</div>
-          <div>
-            <h1>Sistema de Tarefas</h1>
-            <p>Bem-vindo, João Silva</p>
+          <div class="icon-box">
+            <img src="/assets/img/veldon (logo).png" style="width: 80px" />
           </div>
+          <div>
+            <h1>VELDON</h1>
+            <p>Bem-vindo, João Victor</p>
+          </div>
+        </div>
+        <div class="botton-register">
+          <button class="btn-register" id="openModal">Registrar</button>
         </div>
       </div>
     </header>
@@ -37,17 +42,25 @@
         <div class="stat-card">
           <div class="stat-info">
             <span>Total</span>
-            <h2>3</h2>
+            <h2>1</h2>
           </div>
           <i class="fas fa-list-check"></i>
         </div>
 
         <div class="stat-card">
           <div class="stat-info">
-            <span>Concluídas</span>
+            <span>Pendentes</span>
             <h2>1</h2>
           </div>
-          <i class="far fa-check-circle icon-green"></i>
+          <i class="far fa-circle stat-icon"></i>
+        </div>
+
+        <div class="stat-card">
+          <div class="stat-info">
+            <span>Concluídas</span>
+            <h2>0</h2>
+          </div>
+          <i class="far fa-check-circle icon-green stat-icon"></i>
         </div>
       </section>
 
@@ -58,13 +71,15 @@
         </div>
 
         <div class="tasks-grid">
-          <article class="task-card">
+          <article class="task-card" data-status="pendente">
             <div class="task-top">
               <div class="task-title-group">
-                <i class="far fa-check-circle icon-green"></i>
+                <button class="btn-check-task" title="Concluir tarefa">
+                  <i class="far fa-circle task-check"></i>
+                </button>
                 <div>
-                  <h3>Implementar sistema de login</h3>
-                  <span class="badge badge-green">Concluída</span>
+                  <h3>Integrar com o backend</h3>
+                  <span class="status-badge badge-pendente">Pendente</span>
                 </div>
               </div>
               <div class="task-actions">
@@ -75,7 +90,7 @@
               </div>
             </div>
             <p class="task-desc">
-              Criar tela de autenticação com validação de formulário.
+              Integrar com framework React para atribuir logica.
             </p>
             <span class="task-date">Criada em 15/04/2026</span>
           </article>

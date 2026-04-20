@@ -1,13 +1,15 @@
 :root {
-    --primary: #5d44f8;
-    --bg-body: #f8f9fa;
-    --white: #ffffff;
-    --text-main: #1A1A1A;
-    --border: #eeeeee;
+    --primary: #5d44f8;       /* Roxo principal (mantém o mesmo) */
+    --bg-body: #111827;      /* Fundo ultra escuro da página */
+    --bg-card: #1f2937;      /* Fundo dos cards e do header */
+    --white: #ffffff;        /* Texto principal */
+    --text-muted: #b1b7c5;   /* Texto secundário (Bem-vindo, João Silva) */
+    --border: #374151;       /* Cor das bordas finas */
 }
 
 body {
-    background-color: #f8f9fa;
+    background-color: var(--bg-body);
+    color: var(--white);
     font-family: 'Segoe UI', sans-serif;
     margin: 0;
     padding: 0%;
@@ -25,23 +27,53 @@ main.container {
 }
 
 /* Header e Logo */
-.header { background-color: #ffffff;
-    border-bottom: 1px solid #eeeeee;
-    padding: 0% 0;
-    width: 100;
+.header { 
+    background-color: var(--bg-card);
+    border-bottom: 1px solid var(--border);
+    padding: 1% 0;  
+    width: 100%;
     display: block; /* Garante que ele se comporte como um bloco */
 }
 
-.logo-area { display: flex; 
+.header .container {
+    display: flex;
+    justify-content: space-between; /* Empurra o botão para a direita do container */
+    align-items: center;
+}
+
+.btn-register {
+    background: var(--primary); 
+    color: rgb(255, 255, 255); 
+    border: none;
+    padding: 10px 20px; 
+    font-size: 16px;
+    border-radius: 8px; 
+    cursor: pointer; 
+    font-weight: 100;
+    align-items: center;
+}
+
+.logo-area { 
+    display: flex; 
     align-items: center; 
     gap: 15px; 
 }
 
+.logo-area h1{
+    margin: 0;
+    line-height: 1.2;
+}
+
+.logo-area p{
+    margin: 0%;
+    color: var(--text-muted);
+    font-size: 0.9rem;
+}
+
 .icon-box { 
-    background: var(--primary); 
     color: white; 
-    padding: 8px 12px; 
-    border-radius: 8px; 
+    padding: 0px; 
+    border-radius: 0px; 
     font-weight: bold;
 }
 
@@ -52,18 +84,20 @@ main.container {
 }
 
 .tab {
-    padding: 8px 16px;
-    font-size: 14px; 
-    border: none; 
-    background: white;
-    border-radius: 8px; 
-    cursor: pointer; 
+    padding: 12px 24px;
+    font-size: 16px;
+    border: 1px solid var(--border); /* Uma borda sutil */
+    background: #1f2937;            /* Mesma cor dos cards */
+    color: var(--text-muted);       /* Texto cinza para o que não está selecionado */
+    border-radius: 8px;
+    cursor: pointer;
     font-weight: 500;
 }
 
 .tab.active { 
-    background: var(--primary); 
-    color: white; 
+    background: var(--primary);
+    color: var(--white);
+    border-color: var(--primary);
 }
 
 /* Botão Nova Tarefa */
@@ -74,5 +108,16 @@ main.container {
     padding: 10px 20px; 
     border-radius: 8px; 
     cursor: pointer; 
-    font-weight: 600;
+    font-weight: 100;
+}
+
+.btn-check-task {
+    background: transparent !important;
+    border: none !important;
+    padding: 0 !important;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    outline: none;
 }
