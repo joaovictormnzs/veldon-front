@@ -1,9 +1,9 @@
 :root {
-    --primary: #5d44f8;       /* Roxo principal (mantém o mesmo) */
-    --bg-body: #111827;      /* Fundo ultra escuro da página */
+    --primary: #5d44f8;       /* Roxo principal*/
+    --bg-body: #111827;      /* Fundo escuro da página */
     --bg-card: #1f2937;      /* Fundo dos cards e do header */
     --white: #ffffff;        /* Texto principal */
-    --text-muted: #b1b7c5;   /* Texto secundário (Bem-vindo, João Silva) */
+    --text-muted: #b1b7c5;   /* Texto secundário*/
     --border: #374151;       /* Cor das bordas finas */
 }
 
@@ -18,7 +18,7 @@ body {
 .container {
     max-width: 1100px;
     margin: 0 auto;
-    padding: 0 15px; /* Isso evita que o texto encoste no canto da tela em celulares */
+    padding: 0 15px; 
 }
 
 main.container {
@@ -32,12 +32,12 @@ main.container {
     border-bottom: 1px solid var(--border);
     padding: 1% 0;  
     width: 100%;
-    display: block; /* Garante que ele se comporte como um bloco */
+    display: block; 
 }
 
 .header .container {
     display: flex;
-    justify-content: space-between; /* Empurra o botão para a direita do container */
+    justify-content: space-between; 
     align-items: center;
 }
 
@@ -86,9 +86,9 @@ main.container {
 .tab {
     padding: 12px 24px;
     font-size: 16px;
-    border: 1px solid var(--border); /* Uma borda sutil */
-    background: #1f2937;            /* Mesma cor dos cards */
-    color: var(--text-muted);       /* Texto cinza para o que não está selecionado */
+    border: 1px solid var(--border); 
+    background: #1f2937;            
+    color: var(--text-muted);       
     border-radius: 8px;
     cursor: pointer;
     font-weight: 500;

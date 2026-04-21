@@ -153,9 +153,22 @@
 
 .task-card.completed .task-check {
     color: #28a745;
-}
+}   
 
 .task-card.completed .badge-status {
     background: #e8f5e9 !important;   
     color: #28a745 !important; 
+}
+
+/* Prioridade badge*/
+
+.priority-badge {
+    background: #374151;
+    color: #9ca3af;
+    display: inline-block !important; 
+    border-radius: 20px !important;  
+    padding: 2px 12px;
+    font-size: 11px;
+    font-weight: bold;
+    text-align: center;
 }

@@ -27,7 +27,57 @@
           </div>
         </div>
         <div class="botton-register">
-          <button class="btn-register" id="openModal">Registrar</button>
+          <button class="btn-register" id="btn-open-register">Registrar</button>
+        </div>
+      </div>
+      <div id="modalRegister" class="modal-overlay">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h2>Registrar Usuário</h2>
+            <button class="btn-close" onclick="closeModal('modalRegister')">
+              &times;
+            </button>
+          </div>
+          <form id="formRegister">
+            <div class="form-group">
+              <label>Nome</label>
+              <!-- (User.name) -->
+              <input
+                type="text"
+                name="name"
+                required
+                placeholder="Nome do usuário"
+              />
+            </div>
+            <div class="form-group">
+              <label>Chave de acesso</label>
+              <!-- (schema.acess key) -->
+              <input
+                type="text"
+                name="acess-key"
+                required
+                placeholder="Chave de acesso para lider"
+              />
+            </div>
+            <div class="form-group">
+              <label>Cargo</label>
+              <!-- (User.role) -->
+              <select name="role" class="form-control">
+                <option value="Lider">Lider</option>
+                <option value="Liderado">Liderado</option>
+              </select>
+            </div>
+            <div class="modal-footer">
+              <button
+                type="button"
+                class="btn-secondary"
+                onclick="closeModal('modalRegister')"
+              >
+                Cancelar
+              </button>
+              <button type="submit" class="btn-primary">Salvar</button>
+            </div>
+          </form>
         </div>
       </div>
     </header>
@@ -37,62 +87,161 @@
         <button class="tab active">Minhas Tarefas</button>
         <button class="tab">Usuários</button>
       </nav>
-
-      <section class="stats-grid">
-        <div class="stat-card">
-          <div class="stat-info">
-            <span>Total</span>
-            <h2>1</h2>
+      <!-- (Aba Minhas tarefas) -->
+      <section class="tasks-section content-active">
+        <section class="stats-grid">
+          <div class="stat-card">
+            <div class="stat-info">
+              <span>Total</span>
+              <h2>1</h2>
+            </div>
+            <i class="fas fa-list-check"></i>
           </div>
-          <i class="fas fa-list-check"></i>
-        </div>
 
-        <div class="stat-card">
-          <div class="stat-info">
-            <span>Pendentes</span>
-            <h2>1</h2>
+          <div class="stat-card">
+            <div class="stat-info">
+              <span>Pendentes</span>
+              <h2>1</h2>
+            </div>
+            <i class="far fa-circle stat-icon"></i>
           </div>
-          <i class="far fa-circle stat-icon"></i>
-        </div>
 
-        <div class="stat-card">
-          <div class="stat-info">
-            <span>Concluídas</span>
-            <h2>0</h2>
+          <div class="stat-card">
+            <div class="stat-info">
+              <span>Concluídas</span>
+              <h2>0</h2>
+            </div>
+            <i class="far fa-check-circle icon-green stat-icon"></i>
           </div>
-          <i class="far fa-check-circle icon-green stat-icon"></i>
-        </div>
-      </section>
+        </section>
 
-      <section class="tasks-section">
-        <div class="tasks-header">
-          <h2>Suas Tarefas</h2>
-          <button class="btn-new" id="openModal">+ Nova Tarefa</button>
-        </div>
-
-        <div class="tasks-grid">
-          <article class="task-card" data-status="pendente">
-            <div class="task-top">
-              <div class="task-title-group">
-                <button class="btn-check-task" title="Concluir tarefa">
-                  <i class="far fa-circle task-check"></i>
+        <section class="tasks-section">
+          <div class="tasks-header">
+            <h2>Suas Tarefas</h2>
+            <button class="btn-new" id="btn-open-new-">+ Nova Tarefa</button>
+          </div>
+          <div id="modalTask" class="modal-overlay">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h2 id="modalTaskTitle">Nova Tarefa</h2>
+                <button class="btn-close" onclick="closeModal('modalTask')">
+                  &times;
                 </button>
-                <div>
-                  <h3>Integrar com o backend</h3>
-                  <span class="status-badge badge-pendente">Pendente</span>
+              </div>
+              <form id="formTask">
+                <div class="form-group">
+                  <label>Título</label>
+                  <!-- (Task.title) -->
+                  <input
+                    type="text"
+                    id="title"
+                    name="title"
+                    required
+                    placeholder="Titulo"
+                  />
+                </div>
+
+                <div class="form-group">
+                  <label>Descrição</label>
+                  <!-- (Task.description) -->
+                  <textarea
+                    id="description"
+                    name="description"
+                    rows="3"
+                    placeholder="Descrição"
+                  ></textarea>
+                </div>
+
+                <div class="form-row">
+                  <div class="form-group">
+                    <label>Prioridade </label>
+                    <!-- (Task.priority) -->
+                    <select id="priority" name="priority">
+                      <option value="BAIXA">Baixa</option>
+                      <option value="MEDIA">Média</option>
+                      <option value="ALTA">Alta</option>
+                    </select>
+                  </div>
+
+                  <div class="form-group">
+                    <label>Atribuir para:</label>
+                    <!-- (assigned_to_id) -->
+                    <select id="assigned_to_id" name="assigned_to_id">
+                      <option value="1">João Victor</option>
+                      <option value="2">Admin</option>
+                    </select>
+                  </div>
+                </div>
+
+                <div class="modal-footer">
+                  <button
+                    type="button"
+                    class="btn-secondary"
+                    onclick="closeModal('modalTask')"
+                  >
+                    Cancelar
+                  </button>
+                  <button type="submit" class="btn-primary">Criar</button>
+                </div>
+              </form>
+            </div>
+          </div>
+          <div class="tasks-grid">
+            <article class="task-card" data-status="pendente">
+              <div class="task-top">
+                <div class="task-title-group">
+                  <button class="btn-check-task" title="Concluir tarefa">
+                    <i class="far fa-circle task-check"></i>
+                  </button>
+                  <div>
+                    <h3>Integrar com o backend</h3>
+                    <span class="status-badge badge-pendente">Pendente</span>
+                    <span class="priority-badge badge-baixa">Baixa</span>
+                  </div>
+                </div>
+                <div class="task-actions">
+                  <button title="Editar">
+                    <i class="fas fa-pencil-alt"></i>
+                  </button>
+                  <button title="Excluir"><i class="fas fa-trash"></i></button>
                 </div>
               </div>
-              <div class="task-actions">
-                <button title="Editar">
-                  <i class="fas fa-pencil-alt"></i>
-                </button>
-                <button title="Excluir"><i class="fas fa-trash"></i></button>
+              <p class="task-desc">
+                Integrar com framework React para atribuir logica.
+              </p>
+              <span class="task-date">Criada em 15/04/2026</span>
+            </article>
+          </div>
+        </section>
+      </section>
+
+      <!-- (Aba Usuarios) -->
+
+      <section class="users-section">
+        <div class="section-header">
+          <h2><i class="fas fa-users"></i> Usuários Cadastrados</h2>
+        </div>
+
+        <div class="users-list">
+          <article class="user-card highlight">
+            <div class="user-info">
+              <div class="user-main">
+                <span class="user-badge-me">João Victor</span>
+                <span class="role-badge">Líder</span>
+              </div>
+              <div class="user-details">
+                <span>Lider</span>
               </div>
             </div>
-            <p class="task-desc">
-              Integrar com framework React para atribuir logica.
-            </p>
-            <span class="task-date">Criada em 15/04/2026</span>
+          </article>
+
+          <article class="user-card">
+            <div class="user-info">
+              <div class="user-main">
+                <span class="role-badge">Liderado</span>
+              </div>
+              <div class="user-details"></div>
+            </div>
           </article>
         </div>
       </section>
